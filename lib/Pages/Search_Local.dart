@@ -6,7 +6,6 @@ class SearchLocal extends StatelessWidget {
   SearchLocal({super.key});
 
   List<States> searchResult = [];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,10 +33,10 @@ class SearchLocal extends StatelessWidget {
                     child: ListView.builder(
                       itemCount: searchResult!.length,
                       itemBuilder: (context, index) => ListTile(
-                        title: Text(snapshot.data![index].name),
-                        leading: Text(snapshot.data![index].id.toString()),
-                        subtitle: Text(snapshot.data![index].capital),
-                        trailing: Text(snapshot.data![index].time_zone),
+                        title: Text(searchResult![index].name),
+                        subtitle: Text(searchResult![index].capital),
+                        leading: Text(searchResult![index].id.toString()),
+                        trailing: Text(searchResult![index].time_zone),
                       ),
                     ),
                   ),

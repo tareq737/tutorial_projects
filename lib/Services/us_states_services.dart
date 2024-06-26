@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:tutorial_search/Model/us_states_Model.dart';
 
+
 Future<List<States>> getDataOfStates() async {
   Dio dio = Dio();
   Response response = await dio.get("https://freetestapi.com/api/v1/us-states");
@@ -14,7 +15,6 @@ Future<List<States>> getDataOfStates() async {
     return [];
   }
 }
-
 
 Future<List<States>> searchInStates({String lexem =''}) async {
   Dio dio = Dio();
