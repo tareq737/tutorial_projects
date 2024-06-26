@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tutorial_search/Pages/Home_Page.dart';
 import 'package:tutorial_search/Pages/Search_Backend.dart';
 import 'package:tutorial_search/Pages/Search_Local.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-      home: SearchLocal(),
+      home: HomePage(),
     );
   }
 }

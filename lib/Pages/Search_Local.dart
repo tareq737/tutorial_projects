@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tutorial_search/Model/us_states_Model.dart';
+import 'package:tutorial_search/Pages/Home_Page.dart';
 import 'package:tutorial_search/Services/us_states_services.dart';
 
 class SearchLocal extends StatelessWidget {
@@ -9,6 +10,21 @@ class SearchLocal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+            appBar: AppBar(
+        leading: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (BuildContext context) {
+                  return const HomePage();
+                },
+              ),
+            );
+          },
+          child: Icon(Icons.arrow_back_ios_new)
+        ),
+      ),
       body: FutureBuilder(
         future: getDataOfStates(),
         builder: (context, snapshot) {

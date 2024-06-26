@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tutorial_search/Pages/Home_Page.dart';
 import 'package:tutorial_search/Services/us_states_services.dart';
 
 class SearchBackend extends StatefulWidget {
@@ -21,6 +22,19 @@ class _SearchUiWithBackendState extends State<SearchBackend> {
               lexem = value;
             });
           },
+        ),
+        leading: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (BuildContext context) {
+                  return const HomePage();
+                },
+              ),
+            );
+          },
+          child: Icon(Icons.arrow_back_ios_new)
         ),
       ),
       body: FutureBuilder(
