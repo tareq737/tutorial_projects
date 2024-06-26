@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:search_from_inside_and_outside_backend/Model/us_states_Model.dart';
+import 'package:tutorial_search/Model/us_states_Model.dart';
 
 Future<List<States>> getDataOfStates() async {
   Dio dio = Dio();

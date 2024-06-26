@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:search_from_inside_and_outside_backend/Pages/Search_Backend.dart';
-import 'package:search_from_inside_and_outside_backend/Pages/Search_Local.dart';
+import 'package:tutorial_search/Pages/Search_Backend.dart';
 
 void main() {
   runApp(const MyApp());
