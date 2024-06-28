@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:tutorial_theme_provider/Pages/home_page.dart';
 import 'package:tutorial_theme_provider/Provider/theme_provider.dart';
 
@@ -11,9 +12,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.light(),
-      home: HomePage(),
+    return ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      builder: (context, child) {
+        final provider = Provider.of<ThemeProvider>(context);
+        return MaterialApp(
+          theme: provider.theme,
+          home: HomePage(),
+        );
+      },
     );
   }
 }
