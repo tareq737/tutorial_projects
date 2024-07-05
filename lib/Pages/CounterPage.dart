@@ -15,7 +15,7 @@ class Counterpage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                FloatingActionButton(
+                FloatingActionButton(heroTag: "abc",
                   onPressed: () {
                     context.read<CounterBloc>().add(DecreaseCounterEvent());
                   },
@@ -44,7 +44,7 @@ class Counterpage extends StatelessWidget {
                     },
                   ),
                 ),
-                FloatingActionButton(
+                FloatingActionButton(heroTag: "dce",
                   onPressed: () {
                     context.read<CounterBloc>().add(IncreaseCounterEvent());
                   },
@@ -56,7 +56,7 @@ class Counterpage extends StatelessWidget {
             ),SizedBox(height: 100,)
             ,ElevatedButton(
               onPressed: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (BuildContext context) {

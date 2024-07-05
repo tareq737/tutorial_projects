@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (BuildContext context) {
@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
            
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                     builder: (BuildContext context) {
@@ -43,6 +43,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(heroTag: "abc", onPressed: () {  },),
     );
   }
 }
